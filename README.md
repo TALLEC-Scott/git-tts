@@ -2,16 +2,9 @@
 
 A fun text-to-speech integration for Git that reads your commit messages aloud. This project provides both an interactive TTS terminal interface (bonus) and a Git post-commit hook that automatically speaks your commit messages.
 
-## Features
+https://github.com/user-attachments/assets/031c1717-795b-4ac7-ad29-50735f4dff79
 
-- **Interactive TTS Interface**: Terminal-based application for converting text to speech
-- **Git Integration**: Post-commit hook that automatically reads commit messages aloud
-
-## Demo
-
-🎵 [**Click here to listen to the demo**](https://tallec-scott.github.io/git-tts/)
-
-## Available Voices
+## Voices
 
 - `expr-voice-2-m` / `expr-voice-2-f` (default male voice)
 - `expr-voice-3-m` / `expr-voice-3-f`
@@ -31,9 +24,9 @@ After installation, every commit will trigger an async TTS generation of your co
 
 ## Requirements for hook 
 
- All you need is uv [uv](https://docs.astral.sh/uv/), allows for quick installs and
- nice shebangs.
-
+ All you need is [uv](https://docs.astral.sh/uv/), allows for quick installs and
+ nice shebangs, the requirements will be installed "lazily"
+ 
 ## Credits
 
 This project is built using [KittenTTS](https://github.com/KittenML/KittenTTS), an decent super light text-to-speech model. Special thanks to KittenML.
