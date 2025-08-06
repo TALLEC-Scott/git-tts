@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+
+def main():
+    # Run TTS generation in separate process
+    subprocess.Popen([
+        'nohup', 'uv', 'run', '--quiet', '--with', 
+        'kittentts @ https://github.com/KittenML/KittenTTS/releases/download/0.1/kittentts-0.1.0-py3-none-any.whl',
+        '--with', 'soundfile', 'python3', '-c',
+        '''
+
+print("🔊")
+import asyncio
+import os
+import sys
+import subprocess
+import soundfile as sf
+from kittentts import KittenTTS
+
+async def play_audio(filename):
+    try:
+        players = ['paplay', 'aplay']
+        for player in players:
+            try:
+                subprocess.Popen([player, filename], stderr=subprocess.DEVNULL)
+                return
+            except FileNotFoundError:
+                continue
+    except Exception:
+        pass
+
+async def generate_tts():
+    try:
+        result = subprocess.run(['git', 'log', '-1', '--pretty=%B'], 
+                               capture_output=True, text=True, check=True)
+        commit_message = result.stdout.strip()
+
+        if not commit_message:
+            return
+
+        tts = KittenTTS("KittenML/kitten-tts-nano-0.1")
+        audio = tts.generate(f"{commit_message}.!", voice='expr-voice-2-m')
+
+        filename = '/tmp/git-commit-tts.wav'
+        sf.write(filename, audio, 24000)
+        await play_audio(filename)
+
+    except Exception:
+        pass
+
+asyncio.run(generate_tts())
+'''
+    ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, preexec_fn=os.setsid)
+
+if __name__ == "__main__":
+    main()
