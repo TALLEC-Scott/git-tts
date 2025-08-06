@@ -2,7 +2,7 @@
 
 A fun text-to-speech integration for Git that reads your commit messages aloud. This project provides both an interactive TTS terminal interface (bonus) and a Git post-commit hook that automatically speaks your commit messages.
 
-https://github.com/user-attachments/assets/86ad2bf2-f968-4191-8a3f-bfeb38f544eb
+https://github.com/user-attachments/assets/5f405ed4-9cb9-4ab7-9644-dbe32e3bc646
 
 ## Voices
 
