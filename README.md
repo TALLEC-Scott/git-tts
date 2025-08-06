@@ -9,10 +9,7 @@ A fun text-to-speech integration for Git that reads your commit messages aloud. 
 
 ## Demo
 
-<audio controls>
-  <source src="https://raw.githubusercontent.com/TALLEC-Scott/git-tts/main/output.wav" type="audio/wav">
-  Your browser does not support the audio element.
-</audio>
+🎵 [**Click here to listen to the demo**](https://tallec-scott.github.io/git-tts/)
 
 ## Available Voices
 
