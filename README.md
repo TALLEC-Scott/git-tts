@@ -31,7 +31,7 @@ After installation, every commit will trigger an async TTS generation of your co
 
 ## Requirements for hook 
 
- All you need is uv [uv](https://docs.astral.sh/uv/), allows for quick installs and
+ All you need is [uv](https://docs.astral.sh/uv/), allows for quick installs and
  nice shebangs.
 
 ## Credits
