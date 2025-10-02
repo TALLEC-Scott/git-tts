@@ -29,4 +29,4 @@ After installation, every commit will trigger an async TTS generation of your co
  
 ## Credits
 
-This project is built using [KittenTTS](https://github.com/KittenML/KittenTTS), an decent super light text-to-speech model. Special thanks to KittenML.
+This project is built using [KittenTTS](https://github.com/KittenML/KittenTTS), a decent super light text-to-speech model. Special thanks to KittenML.
